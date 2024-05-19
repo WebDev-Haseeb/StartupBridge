@@ -11,7 +11,7 @@ abstract class User {
 
 
     //Non-parametrized Constructor.
-    User() {};
+    User() {}
 
     //Parametrized Constructor.
     User(int id, String name, String email, String pass, String type) {
@@ -126,7 +126,7 @@ abstract class User {
     public void updateProfile() {
         // Implementation for updating user profile
     }
-};
+}
 
 
 class Startup extends User {
@@ -137,7 +137,7 @@ class Startup extends User {
     private String pitchDeck;
 
     //Non Parametrized Constructor.
-    Startup() {};
+    Startup() {}
 
     //Parametrized Constructor.
     Startup(int id, String name, String email, String password, String type, String company, String des,
@@ -253,6 +253,11 @@ class Startup extends User {
         System.out.println("Displaying investor profiles...");
     }
 
+    public void createStartupGig() {
+        // Create the Gig for Startup so that Investor can visit it.
+        System.out.println("Gig has been Published.");
+    }
+
     public void initiateFundingDiscussion() {
         // Success message
         System.out.println("Funding discussion initiated.");
@@ -262,17 +267,17 @@ class Startup extends User {
         // Success message
         System.out.println("Funding deal closed.");
     }
-};
+}
 
 
 
 class Investor extends User {
-    String investmentFocus;
-    List<String> portfolio;
-    double netWorth;
+    private String investmentFocus;
+    private List<String> portfolio;
+    private double netWorth;
 
     //Non-Parametrized Constructor.
-    Investor() {};
+    Investor() {}
 
     //Parametrized Constructor.
     Investor(int id, String name, String email, String password, String type, String focus,
@@ -361,6 +366,11 @@ class Investor extends User {
         System.out.println("Displaying startup profiles...");
     }
 
+    public void browseStartupGigs() {
+        // Visit Startup Gigs.
+        System.out.println("Gig has been displayed.");
+    }
+
     public void viewStartupPitches() {
         // Display startup pitch deck (replace with actual data retrieval)
         System.out.println("Displaying startup pitch deck...");
@@ -375,14 +385,14 @@ class Investor extends User {
         // Success message
         System.out.println("Funding deal closed.");
     }
-};
+}
 
 
 class Admin extends User {
-    String adminType;
+    private String adminType;
 
     //Non-parametrized Constructor.
-    Admin() {};
+    Admin() {}
 
     //Parametrized Constructor.
     Admin (int id, String name, String email, String password, String type, String adminType) {
@@ -407,9 +417,7 @@ class Admin extends User {
     }
 
 
-
     //Methods.
-
 
     //Super Class Method.
     @Override
@@ -601,16 +609,21 @@ class Admin extends User {
                 System.out.println("Invalid option. Please try again.");
         }
     }
-};
+
+    public void deleteGigs() {
+        //Implementation.
+        System.out.println("The gig has been unpublished and deleted.");
+    }
+}
 
 class SecureCommunication {
-    String senderID;
-    String receiverID;
-    String message;
-    String timeStamp;
+    private String senderID;
+    private String receiverID;
+    private String message;
+    private String timeStamp;
 
     //Non-parametrized Constructor.
-    SecureCommunication() {};
+    SecureCommunication() {}
 
     //Parametrized Constructor.
     SecureCommunication (String senderID, String receiverID, String message, String timeStamp) {
@@ -698,4 +711,5 @@ class SecureCommunication {
         // Logic to send the message securely.
     }
 
-};
+}
+
