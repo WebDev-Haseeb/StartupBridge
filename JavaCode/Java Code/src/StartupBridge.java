@@ -602,3 +602,100 @@ class Admin extends User {
         }
     }
 };
+
+class SecureCommunication {
+    String senderID;
+    String receiverID;
+    String message;
+    String timeStamp;
+
+    //Non-parametrized Constructor.
+    SecureCommunication() {};
+
+    //Parametrized Constructor.
+    SecureCommunication (String senderID, String receiverID, String message, String timeStamp) {
+        //Validation...
+        if (senderID.isEmpty()) {
+            throw new IllegalArgumentException("Sender ID can't be empty.");
+        }
+
+        if (receiverID.isEmpty()) {
+            throw new IllegalArgumentException("Receiver ID can't be empty.");
+        }
+
+        if (message.length()<100) {
+            throw new IllegalArgumentException("Message must at least have 100 characters.");
+        }
+
+        //Time stamp validation.
+        String[] timeComponents = timeStamp.split(":");
+
+        if(timeComponents.length != 3) {
+            throw new IllegalArgumentException("Time stamp must be in HH:MM:SS format");
+        }
+
+        int hours = Integer.parseInt(timeComponents[0]);
+        int minutes = Integer.parseInt(timeComponents[1]);
+        int seconds = Integer.parseInt(timeComponents[2]);
+
+        if(hours > 23) {
+            throw new IllegalArgumentException("Hours in time stamp cannot be greater than 23");
+        }
+
+        if(minutes > 59) {
+            throw new IllegalArgumentException("Minutes in time stamp cannot be greater than 59");
+        }
+
+        if(seconds > 59) {
+            throw new IllegalArgumentException("Seconds in time stamp cannot be greater than 59");
+        }
+
+
+        //Initialization...
+        this.senderID = senderID;
+        this.receiverID = receiverID;
+        this.message = message;
+        this.timeStamp = timeStamp;
+    }
+
+
+    //Setters.
+    public void setSenderID(String senderID){
+        this.senderID = senderID;
+    }
+
+    public void setReceiverID(String receiverID){
+        this.receiverID = receiverID;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    public void setTimeStamp(String timeStamp){
+        this.timeStamp = timeStamp;
+    }
+
+
+    //Getters.
+    public String getSenderID(){
+        return this.senderID;
+    }
+
+    public String getReceiverID(){
+        return this.receiverID;
+    }
+
+    public String getMessage(){
+        return this.message;
+    }
+
+    public String getTimeStamp(){
+        return this.timeStamp;
+    }
+
+    public void sendMessage() throws Exception {
+        // Logic to send the message securely.
+    }
+
+};
