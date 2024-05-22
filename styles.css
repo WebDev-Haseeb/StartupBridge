@@ -32,6 +32,7 @@ body {
 }
 
 .logo span {
+    text-decoration: none;
     color: #f5f5f5;
     font-weight: 700;
     font-size: 1.25rem;
@@ -46,6 +47,8 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -58,8 +61,19 @@ body {
     transition: color 0.3s;
 }
 
+.nav-links #login {
+    background-color: #3498db;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
 .navbar a:hover {
     color: #4eabe8;
+}
+
+.nav-links #login:hover {
+    background-color: #fff;
 }
 
 .header {
@@ -265,3 +279,102 @@ form button:hover {
     justify-content: center;
     gap: 0.5rem;
 }
+
+
+/* Signup styling */
+.signup {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-switch {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.form-btn {
+    background-color: #1a1a1d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-btn.active {
+    background-color: #2980b9;
+}
+
+.signup-form {
+    display: none;
+}
+
+.signup-form.hidden {
+    display: none;
+}
+
+.signup-form:not(.hidden) {
+    display: block;
+}
+
+.signup-form h2 {
+    margin-bottom: 1rem;
+    color: #1a1a1d;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.signup-form input,
+.signup-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #2573a6;
+}
+
+.signup-form a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+    color: #333;
+}
+
+.signup-form a:hover {
+    color: #2980b9;
+}
+

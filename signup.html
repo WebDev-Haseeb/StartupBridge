@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupBridge - Sign Up</title>
+    <link rel="icon" href="./images/title.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/title.svg" alt="StartupBridge Logo">
+            </a>
+            <span><a href="./index.html">StartupBridge</a></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li><a href="./about_us.html"><i class="bi bi-info-circle-fill"></i> About Us</a></li>
+            <li><a href="./contact.html"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+            <li><a id="login" href="#" class="login-btn"><i class="bi bi-box-arrow-in-right"></i> Join</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Sign Up to Startup Bridge</h1>
+        <p>- Join us and become part of an innovative community -</p>
+    </header>
+
+    <section class="signup">
+        <div class="form-container">
+            <div class="form-switch">
+                <button class="form-btn active" onclick="showForm('startup')">Startup</button>
+                <button class="form-btn" onclick="showForm('admin')">Admin</button>
+                <button class="form-btn" onclick="showForm('investor')">Investor</button>
+            </div>
+            <form id="startup-form" class="signup-form hidden">
+                <h2>Startup Sign Up</h2>
+                <label for="startup-name">Startup Name</label>
+                <input type="text" id="startup-name" name="startup-name" required>
+
+                <label for="startup-email">Email</label>
+                <input type="email" id="startup-email" name="startup-email" required>
+
+                <label for="startup-password">Password</label>
+                <input type="password" id="startup-password" name="startup-password" required>
+
+                <label for="startup-description">Description</label>
+                <textarea id="startup-description" name="startup-description" rows="4" required></textarea>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <form id="admin-form" class="signup-form hidden">
+                <h2>Admin Sign Up</h2>
+                <label for="admin-name">Name</label>
+                <input type="text" id="admin-name" name="admin-name" required>
+
+                <label for="admin-email">Email</label>
+                <input type="email" id="admin-email" name="admin-email" required>
+
+                <label for="admin-password">Password</label>
+                <input type="password" id="admin-password" name="admin-password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <form id="investor-form" class="signup-form">
+                <h2>Investor Sign Up</h2>
+                <label for="investor-name">Name</label>
+                <input type="text" id="investor-name" name="investor-name" required>
+
+                <label for="investor-email">Email</label>
+                <input type="email" id="investor-email" name="investor-email" required>
+
+                <label for="investor-password">Password</label>
+                <input type="password" id="investor-password" name="investor-password" required>
+
+                <button type="submit">Sign Up</button>
+                <a href="#">Already have an Account? Login</a>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Startup Bridge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showForm(formType) {
+            document.querySelectorAll('.signup-form').forEach(form => {
+                form.classList.add('hidden');
+            });
+            document.querySelectorAll('.form-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(formType + '-form').classList.remove('hidden');
+            document.querySelector(`.form-btn[onclick="showForm('${formType}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
