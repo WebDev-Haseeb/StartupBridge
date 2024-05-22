@@ -106,13 +106,14 @@ body {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
+    border: 1px solid #2c3e50;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
 .grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px #2c3e50;
 }
 
 .grid-item img {
