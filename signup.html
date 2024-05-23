@@ -27,7 +27,7 @@
             <li><a href="./index.html"><i class="bi bi-house-fill"></i> Home</a></li>
             <li><a href="./about_us.html"><i class="bi bi-info-circle-fill"></i> About Us</a></li>
             <li><a href="./contact.html"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-            <li><a id="login" href="#" class="login-btn"><i class="bi bi-box-arrow-in-right"></i> Join</a></li>
+            <li><a id="login" href="./login.html" class="login-btn"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
         </ul>
     </nav>
 
@@ -43,7 +43,7 @@
                 <button class="form-btn" onclick="showForm('admin')">Admin</button>
                 <button class="form-btn" onclick="showForm('investor')">Investor</button>
             </div>
-            <form id="startup-form" class="signup-form hidden">
+            <form id="startup-form" class="signup-form">
                 <h2>Startup Sign Up</h2>
                 <label for="startup-name">Startup Name</label>
                 <input type="text" id="startup-name" name="startup-name" required>
@@ -58,6 +58,9 @@
                 <textarea id="startup-description" name="startup-description" rows="4" required></textarea>
 
                 <button type="submit">Sign Up</button>
+                <div id="login-container">
+                    <a href="./login.html" class="login-link">Already have an account? Login</a>
+                </div>
             </form>
 
             <form id="admin-form" class="signup-form hidden">
@@ -72,9 +75,12 @@
                 <input type="password" id="admin-password" name="admin-password" required>
 
                 <button type="submit">Sign Up</button>
+                <div id="login-container">
+                    <a href="./login.html" class="login-link">Already have an account? Login</a>
+                </div>
             </form>
 
-            <form id="investor-form" class="signup-form">
+            <form id="investor-form" class="signup-form hidden">
                 <h2>Investor Sign Up</h2>
                 <label for="investor-name">Name</label>
                 <input type="text" id="investor-name" name="investor-name" required>
@@ -86,7 +92,9 @@
                 <input type="password" id="investor-password" name="investor-password" required>
 
                 <button type="submit">Sign Up</button>
-                <a href="#">Already have an Account? Login</a>
+                <div id="login-container">
+                    <a href="./login.html" class="login-link">Already have an account? Login</a>
+                </div>
             </form>
         </div>
     </section>
