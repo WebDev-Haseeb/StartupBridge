@@ -61,7 +61,7 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links #login {
+.nav-links #signup {
     background-color: #3498db;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -72,7 +72,7 @@ body {
     color: #4eabe8;
 }
 
-.nav-links #login:hover {
+.nav-links #signup:hover {
     background-color: #fff;
 }
 
@@ -98,53 +98,48 @@ body {
     margin-top: 1rem;
 }
 
+
 .why-us {
     padding: 2rem;
-    background-color: #f5f5f5;
     text-align: center;
     flex: 1;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-}
-
-.grid a {
-    text-decoration: none;
-    color: #333;
-}
-
-.grid-item {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.grid-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 10px #7f7f7f;
-    border: none;
-}
-
-.grid-item img {
-    height: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.grid-item h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+.why-us h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.grid-item p {
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 30%;
+}
+
+.box img {
+    width: 3rem;
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.box p {
     font-size: 1rem;
     color: #7f8c8d;
 }
+
 
 .footer {
     background-color: #000;
@@ -153,7 +148,6 @@ body {
     padding: 1rem 0;
     margin-top: 2rem;
 }
-
 
 
 
@@ -168,7 +162,7 @@ body {
 .box-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -378,7 +372,9 @@ form button:hover {
     background-color: #fff;
     color: #2980b9;
     border: 1px solid #2980b9;
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 1rem;
+    font-size: small;
+    letter-spacing: 0.05rem;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
@@ -455,7 +451,9 @@ form button:hover {
     background-color: #fff;
     color: #2980b9;
     border: 1px solid #2980b9;
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 1rem;
+    font-size: small;
+    letter-spacing: 0.05rem;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
