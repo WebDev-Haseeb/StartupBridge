@@ -114,6 +114,12 @@
             document.getElementById(formType + '-form').classList.remove('hidden');
             document.querySelector(`.form-btn[onclick="showForm('${formType}')"]`).classList.add('active');
         }
+
+        document.getElementById('startup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Startup account created successfully!');
+            window.location.href = './login.html';
+        });
     </script>
 </body>
 
