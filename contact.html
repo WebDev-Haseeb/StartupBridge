@@ -43,7 +43,7 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+                <textarea id="message" name="message" rows="6" required minlength="50"></textarea>
 
                 <button type="submit">Send Message</button>
             </form>
@@ -58,16 +58,6 @@
     <footer class="footer">
         <p>&copy; 2024 Startup Bridge. All rights reserved.</p>
     </footer>
-<script type="text/javascript">
-    let textArea = document.getElementById('message');
-    let submitButton = document.querySelector('button[type="submit"]');
-
-    submitButton.addEventListener('click', function () {
-        if (textArea.innerHTML.length<50) {
-            alert("Message should contain atleast 50 characters.");
-        }
-    })
-</script>
 </body>
 
 </html>
